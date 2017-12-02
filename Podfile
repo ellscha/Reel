@@ -6,6 +6,10 @@ target 'Reel' do
   use_frameworks!
   pod 'Alamofire'
   pod 'SwiftyJSON'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
+pod ‘FacebookAuth’
   # Pods for Reel
 
 end
