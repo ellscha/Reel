@@ -13,7 +13,9 @@
 		4D89779A1FD27B970077DF52 /* Reel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D8977981FD27B970077DF52 /* Reel.xcdatamodeld */; };
 		4D89779C1FD27B970077DF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D89779B1FD27B970077DF52 /* Assets.xcassets */; };
 		4D89779F1FD27B970077DF52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D89779D1FD27B970077DF52 /* LaunchScreen.storyboard */; };
-		4DDE7E491FD29ED7003DA4B3 /* RLAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDE7E481FD29ED7003DA4B3 /* RLAPIClient.swift */; };
+		4DDE7E491FD29ED7003DA4B3 /* GBAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDE7E481FD29ED7003DA4B3 /* GBAPIClient.swift */; };
+		4DEE0BA01FD2A28200263EF2 /* GBKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE0B9F1FD2A28200263EF2 /* GBKeys.swift */; };
+		7D5ACD128C36D8B2128EF69B /* Pods_Reel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E01870B30032D2FF0A3005D /* Pods_Reel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,11 @@
 		4D89779B1FD27B970077DF52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D89779E1FD27B970077DF52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D8977A01FD27B970077DF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DDE7E481FD29ED7003DA4B3 /* RLAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLAPIClient.swift; sourceTree = "<group>"; };
+		4DDE7E481FD29ED7003DA4B3 /* GBAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBAPIClient.swift; sourceTree = "<group>"; };
+		4DEE0B9F1FD2A28200263EF2 /* GBKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBKeys.swift; sourceTree = "<group>"; };
+		4E01870B30032D2FF0A3005D /* Pods_Reel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE9DD874A7C01698B82655A /* Pods-Reel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reel/Pods-Reel.debug.xcconfig"; sourceTree = "<group>"; };
+		CAA02DBDE7128004F15E22EC /* Pods-Reel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reel/Pods-Reel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5ACD128C36D8B2128EF69B /* Pods_Reel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				4D8977901FD27B970077DF52 /* Reel */,
 				4D89778F1FD27B970077DF52 /* Products */,
+				7AEBB513C8C8A561854D7BE0 /* Pods */,
+				54CAB8CD352456731F8DBB12 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,12 +71,30 @@
 				4D8977931FD27B970077DF52 /* ViewController.swift */,
 				4D8977951FD27B970077DF52 /* Main.storyboard */,
 				4D89779B1FD27B970077DF52 /* Assets.xcassets */,
-				4DDE7E481FD29ED7003DA4B3 /* RLAPIClient.swift */,
+				4DDE7E481FD29ED7003DA4B3 /* GBAPIClient.swift */,
+				4DEE0B9F1FD2A28200263EF2 /* GBKeys.swift */,
 				4D89779D1FD27B970077DF52 /* LaunchScreen.storyboard */,
 				4D8977A01FD27B970077DF52 /* Info.plist */,
 				4D8977981FD27B970077DF52 /* Reel.xcdatamodeld */,
 			);
 			path = Reel;
+			sourceTree = "<group>";
+		};
+		54CAB8CD352456731F8DBB12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E01870B30032D2FF0A3005D /* Pods_Reel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AEBB513C8C8A561854D7BE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AE9DD874A7C01698B82655A /* Pods-Reel.debug.xcconfig */,
+				CAA02DBDE7128004F15E22EC /* Pods-Reel.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D8977A31FD27B970077DF52 /* Build configuration list for PBXNativeTarget "Reel" */;
 			buildPhases = (
+				9BD95E216F7777F54E759855 /* [CP] Check Pods Manifest.lock */,
 				4D89778A1FD27B970077DF52 /* Sources */,
 				4D89778B1FD27B970077DF52 /* Frameworks */,
 				4D89778C1FD27B970077DF52 /* Resources */,
+				8874476BAB091A14F7E1EABB /* [CP] Embed Pods Frameworks */,
+				3B2355149055F720381AF4A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +167,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B2355149055F720381AF4A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reel/Pods-Reel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8874476BAB091A14F7E1EABB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Reel/Pods-Reel-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reel/Pods-Reel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BD95E216F7777F54E759855 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4D89778A1FD27B970077DF52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -145,7 +231,8 @@
 				4D8977941FD27B970077DF52 /* ViewController.swift in Sources */,
 				4D8977921FD27B970077DF52 /* AppDelegate.swift in Sources */,
 				4D89779A1FD27B970077DF52 /* Reel.xcdatamodeld in Sources */,
-				4DDE7E491FD29ED7003DA4B3 /* RLAPIClient.swift in Sources */,
+				4DEE0BA01FD2A28200263EF2 /* GBKeys.swift in Sources */,
+				4DDE7E491FD29ED7003DA4B3 /* GBAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +367,7 @@
 		};
 		4D8977A41FD27B970077DF52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AE9DD874A7C01698B82655A /* Pods-Reel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +383,7 @@
 		};
 		4D8977A51FD27B970077DF52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAA02DBDE7128004F15E22EC /* Pods-Reel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
