@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D7465181FD2FE3500198A5B /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7465171FD2FE3500198A5B /* ProfileTableViewController.swift */; };
+		4D74651C1FD2FEF900198A5B /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74651B1FD2FEF900198A5B /* ProfileTableViewCell.swift */; };
+		4D74651E1FD2FF0200198A5B /* QueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74651D1FD2FF0200198A5B /* QueueTableViewCell.swift */; };
+		4D7465201FD2FF0700198A5B /* ReelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74651F1FD2FF0700198A5B /* ReelTableViewCell.swift */; };
+		4D7465221FD3001300198A5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7465211FD3001300198A5B /* User.swift */; };
 		4D8977921FD27B970077DF52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8977911FD27B970077DF52 /* AppDelegate.swift */; };
 		4D8977941FD27B970077DF52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8977931FD27B970077DF52 /* ViewController.swift */; };
 		4D8977971FD27B970077DF52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D8977951FD27B970077DF52 /* Main.storyboard */; };
@@ -19,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D7465161FD2DE3E00198A5B /* Reel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reel.entitlements; sourceTree = "<group>"; };
+		4D7465171FD2FE3500198A5B /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		4D74651B1FD2FEF900198A5B /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		4D74651D1FD2FF0200198A5B /* QueueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTableViewCell.swift; sourceTree = "<group>"; };
+		4D74651F1FD2FF0700198A5B /* ReelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelTableViewCell.swift; sourceTree = "<group>"; };
+		4D7465211FD3001300198A5B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4D89778E1FD27B970077DF52 /* Reel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8977911FD27B970077DF52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D8977931FD27B970077DF52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +57,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D7465191FD2FECC00198A5B /* CellVC */ = {
+			isa = PBXGroup;
+			children = (
+				4D74651B1FD2FEF900198A5B /* ProfileTableViewCell.swift */,
+				4D74651D1FD2FF0200198A5B /* QueueTableViewCell.swift */,
+				4D74651F1FD2FF0700198A5B /* ReelTableViewCell.swift */,
+			);
+			path = CellVC;
+			sourceTree = "<group>";
+		};
 		4D8977851FD27B970077DF52 = {
 			isa = PBXGroup;
 			children = (
@@ -67,9 +88,13 @@
 		4D8977901FD27B970077DF52 /* Reel */ = {
 			isa = PBXGroup;
 			children = (
+				4D7465161FD2DE3E00198A5B /* Reel.entitlements */,
 				4D8977911FD27B970077DF52 /* AppDelegate.swift */,
 				4D8977931FD27B970077DF52 /* ViewController.swift */,
+				4D7465211FD3001300198A5B /* User.swift */,
 				4D8977951FD27B970077DF52 /* Main.storyboard */,
+				4D7465171FD2FE3500198A5B /* ProfileTableViewController.swift */,
+				4D7465191FD2FECC00198A5B /* CellVC */,
 				4D89779B1FD27B970077DF52 /* Assets.xcassets */,
 				4DDE7E481FD29ED7003DA4B3 /* GBAPIClient.swift */,
 				4DEE0B9F1FD2A28200263EF2 /* GBKeys.swift */,
@@ -133,6 +158,11 @@
 					4D89778D1FD27B970077DF52 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -191,11 +221,27 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Reel/Pods-Reel-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookAuth/FacebookAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,10 +274,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7465181FD2FE3500198A5B /* ProfileTableViewController.swift in Sources */,
+				4D7465201FD2FF0700198A5B /* ReelTableViewCell.swift in Sources */,
+				4D74651C1FD2FEF900198A5B /* ProfileTableViewCell.swift in Sources */,
 				4D8977941FD27B970077DF52 /* ViewController.swift in Sources */,
+				4D74651E1FD2FF0200198A5B /* QueueTableViewCell.swift in Sources */,
 				4D8977921FD27B970077DF52 /* AppDelegate.swift in Sources */,
 				4D89779A1FD27B970077DF52 /* Reel.xcdatamodeld in Sources */,
 				4DEE0BA01FD2A28200263EF2 /* GBKeys.swift in Sources */,
+				4D7465221FD3001300198A5B /* User.swift in Sources */,
 				4DDE7E491FD29ED7003DA4B3 /* GBAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +421,7 @@
 			baseConfigurationReference = 9AE9DD874A7C01698B82655A /* Pods-Reel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Reel/Reel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZK2P8S7A36;
 				INFOPLIST_FILE = Reel/Info.plist;
@@ -386,6 +438,7 @@
 			baseConfigurationReference = CAA02DBDE7128004F15E22EC /* Pods-Reel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Reel/Reel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZK2P8S7A36;
 				INFOPLIST_FILE = Reel/Info.plist;
