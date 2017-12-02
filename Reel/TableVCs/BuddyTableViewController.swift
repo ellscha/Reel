@@ -54,7 +54,7 @@ class BuddyTableViewController: UITableViewController, UISearchResultsUpdating {
         if let buddies = buddyList{
             let list = buddies[indexPath.row]
             cell.buddyNameLabel.text = list
-            cell.buddyPicView.image = UIImage.init(named: User.buddies[indexPath.row])
+            cell.buddyPicView.image = UIImage.init(named: list)
 
         }
         // Configure the cell...

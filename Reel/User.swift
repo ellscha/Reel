@@ -18,6 +18,6 @@ class User : NSObject {
     static var profilePicture : String = "profPic"
     
     static var buddies : [String] = ["Jerome", "Orville", "Celeste", "Andrew", "Elli", "Yale", "Olga", "Jeremy", "Gladis", "Celine"]
-    
+    //["Jerome":"Jerome", "Orville":"Orville", "Celeste":"Celeste", "Andrew":"Andrew", "Elli":"Elli", "Yale":"Yale", "Olga":"Olga", "Jeremy":"Jeremy", "Gladis":"Gladis", "Celine":"Celine"]
     
 }
