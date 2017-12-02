@@ -51,7 +51,7 @@ class ProfileTableViewController: UITableViewController {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "profile", for: indexPath) as! ProfileTableViewCell
-            cell.nameLabel.text! = User.name
+            cell.nameLabel.text! = (User.firstName + User.lastName)
             cell.profilePicView.image = UIImage.init(named: User.profilePicture)
             cell.bioLabel.text! = User.bio
             cell.handleLabel.text! = User.handle
@@ -68,10 +68,7 @@ class ProfileTableViewController: UITableViewController {
             return cell
 
         }
-//        let profileCell = tableView.dequeueReusableCell(withIdentifier: "profile", for: indexPath)
-        
-        
-        // Configure the cell...
+
     }
     
 
@@ -119,5 +116,17 @@ class ProfileTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 1:
+            return "Movies in \(User.firstName)'s reel"
+        case 2:
+            return "Movies in \(User.firstName)'s queue"
+        default:
+            return ""
+
+        }
+    }
 
 }
