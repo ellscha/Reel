@@ -17,6 +17,7 @@ class User : NSObject {
 
     static var profilePicture : String = "profPic"
     
+    static var buddies : [String] = ["Jerome", "Orville", "Celeste", "Andrew", "Elli", "Yale", "Olga", "Jeremy", "Gladis", "Celine"]
     
     
 }

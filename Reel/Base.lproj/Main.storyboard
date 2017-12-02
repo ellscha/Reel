@@ -87,8 +87,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9p-9o-hEn">
-                                            <rect key="frame" x="33.5" y="0.0" width="268" height="43.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9p-9o-hEn">
+                                            <rect key="frame" x="50.5" y="0.0" width="234.5" height="43.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -96,7 +96,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="c9p-9o-hEn" firstAttribute="centerY" secondItem="N1Q-vm-uWv" secondAttribute="centerY" id="4g1-gr-BRM"/>
-                                        <constraint firstItem="c9p-9o-hEn" firstAttribute="width" secondItem="N1Q-vm-uWv" secondAttribute="width" multiplier="0.8" id="QE0-r2-L3T"/>
+                                        <constraint firstItem="c9p-9o-hEn" firstAttribute="width" secondItem="N1Q-vm-uWv" secondAttribute="width" multiplier="0.7" id="QE0-r2-L3T"/>
                                         <constraint firstItem="c9p-9o-hEn" firstAttribute="height" secondItem="N1Q-vm-uWv" secondAttribute="height" id="hYE-pa-pK7"/>
                                         <constraint firstItem="c9p-9o-hEn" firstAttribute="centerX" secondItem="N1Q-vm-uWv" secondAttribute="centerX" id="iuw-zi-opZ"/>
                                     </constraints>
@@ -174,19 +174,46 @@
         <!--BuddyReel-->
         <scene sceneID="Lwh-ze-qRL">
             <objects>
-                <tableViewController title="BuddyReel" id="2yR-0V-7Hb" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ojL-IG-U74">
+                <tableViewController title="BuddyReel" id="2yR-0V-7Hb" customClass="BuddyTableViewController" customModule="Reel" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ojL-IG-U74">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WWV-Om-dhO">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="buddy" id="WWV-Om-dhO" customClass="BuddyTableViewCell" customModule="Reel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WWV-Om-dhO" id="sXs-kH-C2q">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Celeste" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CQw-z0-bOX">
+                                            <rect key="frame" x="0.0" y="4" width="79" height="72"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgB-En-BWa">
+                                            <rect key="frame" x="94" y="-0.5" width="281" height="80"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bgB-En-BWa" firstAttribute="leading" secondItem="CQw-z0-bOX" secondAttribute="trailing" constant="15.5" id="0nk-JO-piL"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="bgB-En-BWa" firstAttribute="centerY" secondItem="WWV-Om-dhO" secondAttribute="centerY" id="3V7-So-8Tn"/>
+                                    <constraint firstItem="CQw-z0-bOX" firstAttribute="centerY" secondItem="WWV-Om-dhO" secondAttribute="centerY" id="DDJ-44-GcV"/>
+                                    <constraint firstItem="bgB-En-BWa" firstAttribute="height" secondItem="WWV-Om-dhO" secondAttribute="height" id="Fdq-8V-dpQ"/>
+                                    <constraint firstItem="bgB-En-BWa" firstAttribute="width" secondItem="WWV-Om-dhO" secondAttribute="width" multiplier="0.75" id="SHL-cY-Ddc"/>
+                                    <constraint firstAttribute="trailing" secondItem="bgB-En-BWa" secondAttribute="trailing" id="UQA-0K-nAw"/>
+                                    <constraint firstItem="CQw-z0-bOX" firstAttribute="width" secondItem="WWV-Om-dhO" secondAttribute="width" multiplier="0.35" constant="-52.25" id="l4j-Ng-4nq"/>
+                                    <constraint firstItem="CQw-z0-bOX" firstAttribute="height" secondItem="WWV-Om-dhO" secondAttribute="height" multiplier="0.9" id="of0-Tp-Xkg"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="buddyNameLabel" destination="bgB-En-BWa" id="oik-Pj-zS2"/>
+                                    <outlet property="buddyPicView" destination="CQw-z0-bOX" id="Js1-Sq-gCe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -198,7 +225,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvd-jr-34s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="1299"/>
+            <point key="canvasLocation" x="936.79999999999995" y="1298.5007496251876"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9YS-Hn-0Pr">
@@ -222,6 +249,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Celeste" width="398" height="398"/>
         <image name="profPic" width="144" height="144"/>
     </resources>
 </document>

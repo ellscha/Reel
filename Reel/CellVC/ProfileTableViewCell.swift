@@ -18,7 +18,9 @@ class ProfileTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         profilePicView.clipsToBounds = true
-        profilePicView.layer.cornerRadius = 20
+        profilePicView.layer.cornerRadius = 75
+        profilePicView.layer.borderColor = UIColor.white.cgColor
+        profilePicView.layer.borderWidth = 10
         // Initialization code
     }
     
