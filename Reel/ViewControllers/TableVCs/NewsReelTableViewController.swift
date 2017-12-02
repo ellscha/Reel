@@ -9,7 +9,7 @@
 import UIKit
 
 class NewsReelTableViewController: UITableViewController {
-
+    let singleton = DataStore.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
 
