@@ -9,7 +9,8 @@ target 'Reel' do
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
-pod ‘FacebookAuth’
+pod 'FacebookAuth'
+pod 'Firebase/Core'
   # Pods for Reel
 
 end

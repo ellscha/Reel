@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		217557AD1FD3406700F3B305 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 217557AC1FD3406700F3B305 /* GoogleService-Info.plist */; };
 		4D7465181FD2FE3500198A5B /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7465171FD2FE3500198A5B /* ProfileTableViewController.swift */; };
 		4D74651C1FD2FEF900198A5B /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74651B1FD2FEF900198A5B /* ProfileTableViewCell.swift */; };
 		4D74651E1FD2FF0200198A5B /* QueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74651D1FD2FF0200198A5B /* QueueTableViewCell.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		217557AC1FD3406700F3B305 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D7465161FD2DE3E00198A5B /* Reel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reel.entitlements; sourceTree = "<group>"; };
 		4D7465171FD2FE3500198A5B /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		4D74651B1FD2FEF900198A5B /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				4D89779D1FD27B970077DF52 /* LaunchScreen.storyboard */,
 				4D8977A01FD27B970077DF52 /* Info.plist */,
 				4D8977981FD27B970077DF52 /* Reel.xcdatamodeld */,
+				217557AC1FD3406700F3B305 /* GoogleService-Info.plist */,
 			);
 			path = Reel;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D89779F1FD27B970077DF52 /* LaunchScreen.storyboard in Resources */,
+				217557AD1FD3406700F3B305 /* GoogleService-Info.plist in Resources */,
 				4D89779C1FD27B970077DF52 /* Assets.xcassets in Resources */,
 				4D8977971FD27B970077DF52 /* Main.storyboard in Resources */,
 			);
@@ -246,7 +250,9 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -259,7 +265,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -363,6 +371,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/FacebookSDKs-iOS-4\"";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -420,6 +429,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/FacebookSDKs-iOS-4\"";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
